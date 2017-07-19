@@ -1,0 +1,34 @@
+inherit kf5
+
+NAME="kproperty3"
+VERSION=3.0.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE property editing framework"
+DESCRIPTION="KProperty is a property editing framework with editor widget
+similar to what is known from Qt Designer. It is used in Kexi and KReport."
+HOMEPAGE="https://community.kde.org/KProperty"
+SRC_URI="mirror://kde/stable/kproperty/src/kproperty-${VERSION}.tar.xz"
+SRC_DIR="kproperty-${VERSION}"
+
+PKG_NAMES="libKPropertyCore3_3 libKPropertyCore3-devel libKPropertyWidgets3_3 libKPropertyWidgets3-devel"
+libKPropertyCore3_3_CONTENTS="
+	usr/bin/cygKPropertyCore3-3.dll
+	usr/share/doc/${NAME}
+"
+libKPropertyWidgets3_3_CONTENTS="
+	usr/bin/cygKPropertyWidgets3-3.dll
+	usr/share/kpropertywidgets3/
+"
+libKPropertyCore3_devel_CONTENTS="
+	usr/include/KPropertyCore3/
+	usr/lib/cmake/KPropertyCore3/
+	usr/lib/libKPropertyCore3.dll.a
+	usr/lib/pkgconfig/KPropertyCore3.pc
+"
+libKPropertyWidgets3_devel_CONTENTS="
+	usr/include/KPropertyWidgets3/
+	usr/lib/cmake/KPropertyWidgets3/
+	usr/lib/libKPropertyWidgets3.dll.a
+	usr/lib/pkgconfig/KPropertyWidgets3.pc
+"
